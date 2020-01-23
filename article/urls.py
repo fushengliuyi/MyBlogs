@@ -1,5 +1,8 @@
-from django.urls import path
+from django.urls import path, re_path
+from django.views.static import serve
+
 from . import views
+from Blogs.settings import MEDIA_ROOT
 
 app_name = 'article'
 urlpatterns = [

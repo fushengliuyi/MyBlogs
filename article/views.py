@@ -5,6 +5,10 @@ from . import models
 # Create your views here.
 
 def index(request):
+    blog_type = request.GET.get('blog_type')
+    if blog_type:
+        blog_type_all = models.Blog.objects.filter(blog_type=blog_type)
+        return render(request, 'article/index.html', locals())
     article = models.Blog.objects.all()
     blog_type = models.BlogType.objects.all()
     return render(request, 'article/index.html', locals())

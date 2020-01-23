@@ -36,6 +36,7 @@ def outer(func):
 
 # 首页展示
 def index(request):
+    print(request.COOKIES.get('email'))
     return render(request, 'rootadmin/index.html')
 
 
@@ -47,12 +48,14 @@ def login(request):
         pwd = request.POST.get('pwd')
 
         user = models.User.objects.filter(email=email).first()
+
         if user:
             if user.password == set_password(pwd):
                 response = HttpResponseRedirect('/rootadmin/index/')
 
                 # 设置 cookie email
                 response.set_cookie('email', email)
+                print(request.COOKIES.get(email))
 
                 # 设置session email
                 request.session['email'] = email

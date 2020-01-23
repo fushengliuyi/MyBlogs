@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # 文章类型
 class BlogType(models.Model):
     type_name = models.CharField(max_length=32)
+    type_images = models.ImageField(upload_to='article/blog_images/')
 
     class Meta:
         db_table = 'blog_type'
