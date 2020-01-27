@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'article',
-    'rootadmin'
+    'rootadmin',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +127,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # STATIC_ROOT
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\','/')
+
+# 配置ckeditor
+CKEDITOR_UPLOAD_PATH = 'upload/'
+
 
 # 上传文件 静态文件 配置目录
 MEDIA_URL = '/media/'

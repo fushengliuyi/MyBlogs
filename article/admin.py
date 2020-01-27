@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, BlogType
+from .models import Blog, BlogType, User
 
 
 # Register your models here.
@@ -13,4 +13,10 @@ class BlogTypeAdmin(admin.ModelAdmin):
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('id', 'blog_type', 'content', 'author', 'created_time', 'last_update_time')
+    ordering = ('-id',)
+
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('id', 'username')
     ordering = ('-id',)

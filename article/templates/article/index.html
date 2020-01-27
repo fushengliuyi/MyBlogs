@@ -65,9 +65,10 @@
                                     class="comment" href="article.html#comment"><i
                                     class="glyphicon glyphicon-comment"></i>
                                 0个不明物体</a>
+                                <span class="user"><i class="glyphicon glyphicon-user"></i>{{ blog.author }}</span>
                             </p>
-                            <span class="user"><i class="glyphicon glyphicon-user"></i>{{ blog.author }}</span>
-                            <p class="note">{{ blog.content|slice:"60" }}....</p>
+
+                            <p class="note">{{ blog.content|striptags|truncatechars:60 }}....</p>
                         </article>
                     {% endfor %}
 
@@ -80,7 +81,8 @@
                                                                         src="
                                                                               /static/{{ foo.blog_type.type_images }}"
                                                                         alt=""></a>
-                        <header><a class="cat" href="/article/index/?blog_type={{ foo.blog_type.id }}">{{ foo.blog_type.type_name }}<i></i></a>
+                        <header><a class="cat"
+                                   href="/article/index/?blog_type={{ foo.blog_type.id }}">{{ foo.blog_type.type_name }}<i></i></a>
                             <h2><a href="article.html" title="">{{ foo.title }}</a></h2>
                         </header>
                         <p class="meta">
