@@ -12,7 +12,7 @@ class BlogTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('id', 'blog_type', 'content', 'author', 'created_time', 'last_update_time')
+    list_display = ('id','title', 'blog_type', 'get_read_num', 'author', 'created_time', 'last_update_time')
     ordering = ('-id',)
 
 
@@ -20,3 +20,4 @@ class BlogAdmin(admin.ModelAdmin):
 class UserAdmin(admin.ModelAdmin):
     list_display = ('id', 'username')
     ordering = ('-id',)
+

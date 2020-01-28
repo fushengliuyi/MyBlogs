@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rootadmin',
     'ckeditor',
     'ckeditor_uploader',
+    'read_statistics'
 ]
 
 MIDDLEWARE = [
@@ -130,7 +131,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # 配置ckeditor
 CKEDITOR_UPLOAD_PATH = 'upload/'
-
 
 # 上传文件 静态文件 配置目录
 MEDIA_URL = '/media/'

@@ -6,6 +6,8 @@ from django.urls import reverse
 from article import models, forms
 import hashlib
 
+from read_statistics.utils import read_statistics_once_read
+
 
 # md5密码加密
 def set_password(pwd):
@@ -58,7 +60,11 @@ def index(request, **kwargs):
 # 博客详情
 def blog_detail(request, article_id):
     content = get_object_or_404(models.Blog, id=int(article_id))
-    return render(request, 'article/article.html', locals())
+    read_cookie_key = read_statistics_once_read(request, content)
+
+    response = render(request, 'article/article.html', locals())
+    response.set_cookie(read_cookie_key, 'true')
+    return response
 
 
 # 用户注册
