@@ -1,6 +1,9 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 import hashlib
+from read_statistics.utils import get_seven_days_read_data
+from article.models import Blog
+from django.contrib.contenttypes.models import ContentType
 
 # Create your views here.
 
@@ -94,3 +97,9 @@ def register(request):
         errmsg = '您提交的数据有误！'
 
     return render(request, 'rootadmin/register.html', locals())
+
+
+def read_num(request):
+    blog_content_type = ContentType.objects.get_for_model(Blog)
+    read_nums,dates = get_seven_days_read_data(blog_content_type)
+    return render(request, 'rootadmin/tables.html', locals())
