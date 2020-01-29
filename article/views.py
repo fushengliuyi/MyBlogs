@@ -1,12 +1,16 @@
+import datetime
 from django.core.paginator import Paginator
-from django.http import HttpResponseRedirect
+from django.db.models import Sum
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse
-
+from django.utils import timezone
 from article import models, forms
 import hashlib
 
-from read_statistics.utils import read_statistics_once_read
+from article.models import Blog
+from read_statistics.utils import read_statistics_once_read, get_today_hot_data, get_yesterday_hot_data, get_7_hot_data
+from django.contrib.contenttypes.models import ContentType
+
+from django.core.cache import cache
 
 
 # md5密码加密
@@ -34,9 +38,19 @@ def set_password(pwd):
 #             response = HttpResponseRedirect(reverse('article:index'))
 #             return response
 
+# 周热搜查询
+def get_7_days_hot_blogs():
+    today = timezone.now().date()
+    date = today - datetime.timedelta(days=7)
+    blogs = Blog.objects.filter(read_details__date__lt=today, read_details__date__gte=date) \
+        .values('id', 'title', 'created_time', 'content') \
+        .annotate(read_num_sum=Sum('read_details__read_num')) \
+        .order_by('-read_num_sum')
+    return blogs
+
 
 # 博客首页
-def index(request, **kwargs):
+def index(request):
     blog_type = request.GET.get('blog_type')
     page = request.GET.get('page')
 
@@ -54,6 +68,28 @@ def index(request, **kwargs):
     article = paginator.page(page)
 
     blog_type = models.BlogType.objects.all()
+
+    # 热搜数据的查询
+    blog_content_type = ContentType.objects.get_for_model(models.Blog)
+
+    # 今日热搜
+    today_hot_data = get_today_hot_data(blog_content_type)
+
+    # 获取 7天热门 博客的缓存数据
+    hot_blogs_for_7_days = cache.get('hot_blogs_for_7_days')
+
+    if hot_blogs_for_7_days is None:
+        hot_blogs_for_7_days = get_7_days_hot_blogs()
+        cache.set('hot_blogs_for_7_days', 'hot_blogs_for_7_days', 60 * 60)
+        print('计算')
+    else:
+        print('use cache')
+    # 昨日热搜
+    yesterday_hot_data = get_yesterday_hot_data(blog_content_type)
+
+    # 周热搜
+    hot_data_for_7_days = hot_blogs_for_7_days
+
     return render(request, 'article/index.html', locals())
 
 

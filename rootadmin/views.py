@@ -99,7 +99,9 @@ def register(request):
     return render(request, 'rootadmin/register.html', locals())
 
 
+# 阅读数量的可视化
 def read_num(request):
     blog_content_type = ContentType.objects.get_for_model(Blog)
-    read_nums,dates = get_seven_days_read_data(blog_content_type)
+    read_nums, dates = get_seven_days_read_data(blog_content_type)
     return render(request, 'rootadmin/tables.html', locals())
+

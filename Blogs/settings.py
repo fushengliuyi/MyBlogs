@@ -135,3 +135,11 @@ CKEDITOR_UPLOAD_PATH = 'upload/'
 # 上传文件 静态文件 配置目录
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+
+# 数据库缓存配置
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
+    }
+}

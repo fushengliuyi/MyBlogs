@@ -55,7 +55,7 @@
                                                                               /static/{{ blog.blog_type.type_images }}"
                                                                             alt=""></a>
                             <header><a class="cat"
-                                       href=" /article/index/?blog_type={{ foo.blog_type.id }}">{{ blog.blog_type.type_name }}<i></i></a>
+                                       href=" /article/index/?blog_type={{ blog.blog_type.id }}">{{ blog.blog_type.type_name }}<i></i></a>
                                 <h2><a href="article.html" title="">{{ blog.title }}</a></h2>
                             </header>
                             <p class="meta">
@@ -83,7 +83,7 @@
                                                                               /static/{{ foo.blog_type.type_images }}"
                                                                         alt=""></a>
                         <header><a class="cat"
-                                   href="/article/index/?blog_type={{ foo.blog_type.id }}">{{ foo.blog_type.type_name }}<i></i></a>
+                                   href="/article/index/?blog_type="{{ foo.blog_type.id }}>{{ foo.blog_type.type_name }}<i></i></a>
                             <h2><a href="article.html" title="">{{ foo.title }}</a></h2>
                         </header>
                         <p class="meta">
@@ -167,44 +167,111 @@
                         别让你不能做的事妨碍到你能做的事。（John Wooden）</p>
                 </div>
             </div>
+            {#今日热搜#}
+            {#            <div class="widget widget_hot">#}
+            {#                <h3>今日热门文章</h3>#}
+            {#                <ul>#}
+            {#                    {% if today_hot_data %}#}
+            {#                        {% for hot_data in today_hot_data %}#}
+            {#                            <li>#}
+            {#                                <a href="/article/details/{{ hot_data.pk }}/">#}
+            {#                            <span class="thumbnail">#}
+            {#                                <img class="thumb"#}
+            {#                                     data-original="/static/article/images/hot.jpg"#}
+            {#                                     src="/static/article/images/hot.jpg"#}
+            {#                                     alt="">#}
+            {#                            </span>#}
+            {#                                    <span class="text">#}
+            {#                                {{ hot_data.content_object }}#}
+            {#                            </span>#}
+            {#                                    <span class="muted">#}
+            {#                                <i class="glyphicon glyphicon-time"></i>#}
+            {#                                {{ hot_data.date }}#}
+            {#                            </span>#}
+            {#                                    <span class="muted">#}
+            {#                                <i class="glyphicon glyphicon-eye-open"></i>#}
+            {#                                        {{ hot_data.read_num }}#}
+            {#                        </span>#}
+            {#                                </a>#}
+            {#                            </li>#}
+            {#                        {% endfor %}#}
+            {#                    {% else %}#}
+            {#                        <span>今日暂无！</span>#}
+            {#                    {% endif %}#}
+            {##}
+            {##}
+            {#                </ul>#}
+            {#            </div>#}
+            {#昨日热搜#}
+            {#            <div class="widget widget_hot">#}
+            {#                <h3>昨日热门文章</h3>#}
+            {#                <ul>#}
+            {#                    {% if yesterday_hot_data %}#}
+            {#                        {% for y_hot_data in yesterday_hot_data %}#}
+            {#                            <li>#}
+            {#                                <a href="/article/details/{{ y_hot_data.pk }}/">#}
+            {#                            <span class="thumbnail">#}
+            {#                                <img class="thumb"#}
+            {#                                     data-original="/static/article/images/hot.jpg"#}
+            {#                                     src="/static/article/images/hot.jpg"#}
+            {#                                     alt="">#}
+            {#                            </span>#}
+            {#                                    <span class="text">#}
+            {#                                {{ y_hot_data.content_object }}#}
+            {#                            </span>#}
+            {#                                    <span class="muted">#}
+            {#                                <i class="glyphicon glyphicon-time"></i>#}
+            {#                                {{ y_hot_data.date }}#}
+            {#                            </span>#}
+            {#                                    <span class="muted">#}
+            {#                                <i class="glyphicon glyphicon-eye-open"></i>#}
+            {#                                        {{ y_hot_data.read_num }}#}
+            {#                        </span>#}
+            {#                                </a>#}
+            {#                            </li>#}
+            {##}
+            {#                        {% endfor %}#}
+            {#                    {% else %}#}
+            {#                        <span>昨日暂无！</span>#}
+            {#                    {% endif %}#}
+            {##}
+            {##}
+            {#                </ul>#}
+            {#            </div>#}
+            {#周热搜#}
             <div class="widget widget_hot">
-                <h3>热门文章</h3>
+                <h3>周热门文章</h3>
                 <ul>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
+                    {% if hot_data_for_7_days %}
+                        {% for hot_7_data in hot_data_for_7_days %}
+                            <li>
+                                <a href="/article/details/{{ hot_7_data.id }}/">
+                            <span class="thumbnail">
+                                <img class="thumb"
+                                     data-original="/static/article/images/hot.jpg"
+                                     src="/static/article/images/hot.jpg"
+                                     alt="">
+                            </span>
+                                    <span class="text">
+                                {{ hot_7_data.title }}
+                            </span>
+                                    <span class="muted">
+                                <i class="glyphicon glyphicon-time"></i>
+                                {{ hot_7_data.created_time|date:'Y-m-s' }}
+                            </span>
+                                    <span class="muted">
+                                <i class="glyphicon glyphicon-eye-open"></i>
+                                        {{ hot_7_data.read_num_sum }}
+                            </span>
+                                </a>
+                            </li>
+
+                        {% endfor %}
+                    {% else %}
+                        <span>昨日暂无！</span>
+                    {% endif %}
+
+
                 </ul>
             </div>
         </aside>

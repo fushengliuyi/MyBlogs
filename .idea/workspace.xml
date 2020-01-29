@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23fe2887-0d3c-40e4-8237-03bbdceac8c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/read_statistics/migrations/0002_readdetail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rootadmin/templates/rootadmin/tables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article/static/article/images/hot.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/280ecd94-3446-4ac5-8e07-5db544257c19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/280ecd94-3446-4ac5-8e07-5db544257c19.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_statistics/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_statistics/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_statistics/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_statistics/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_statistics/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_statistics/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootadmin/templates/rootadmin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/rootadmin/templates/rootadmin/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootadmin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rootadmin/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rootadmin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rootadmin/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,26 +57,59 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article/models.py">
+        <entry file="file://$PROJECT_DIR$/read_statistics/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="360">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#132#352#0" />
-                <element signature="e#390#569#0" />
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/article/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="78" column="58" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#438#533#0" />
+                <element signature="e#1228#1546#0" />
+                <element signature="e#1922#2183#0" />
+                <element signature="e#2220#2895#0" />
+                <element signature="e#2929#3275#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_statistics/admin.py">
+        <entry file="file://$PROJECT_DIR$/article/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="60">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rootadmin/templates/rootadmin/tables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_statistics/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,63 +118,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/read_statistics/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="180">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#472#745#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_statistics/utils.py">
+        <entry file="file://$PROJECT_DIR$/article/templates/article/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+            <state relative-caret-position="1102">
+              <caret line="264" column="35" selection-start-line="264" selection-start-column="35" selection-end-line="264" selection-end-column="35" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#49#480#0" />
+                <element signature="e#10195#10550#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rootadmin/views.py">
+        <entry file="file://$PROJECT_DIR$/Blogs/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#208#303#0" />
-                <element signature="e#327#872#0" />
-                <element signature="e#906#992#0" />
-                <element signature="e#1031#1806#0" />
-                <element signature="e#1852#2532#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rootadmin/templates/rootadmin/tables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-              <folding>
-                <element signature="e#222#271#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rootadmin/urls.py">
+        <entry file="file://$PROJECT_DIR$/article/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="517">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -161,11 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/static/article/images/banner/banner_02.jpg</find>
-      <find>images</find>
-      <find>loading.gif</find>
-      <find>scroll</find>
-      <find>index</find>
       <find>load</find>
       <find>scrollLoading</find>
       <find>查看更多</find>
@@ -191,6 +197,11 @@
       <find>120</find>
       <find>Tables</find>
       <find>DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the</find>
+      <find>blog_type=</find>
+      <find>php</find>
+      <find>con</find>
+      <find>ContentType</find>
+      <find>今日热门</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;/static/css/</replace>
@@ -234,27 +245,27 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/article/templates/article/base.html" />
         <option value="$PROJECT_DIR$/Blogs/urls.py" />
-        <option value="$PROJECT_DIR$/Blogs/settings.py" />
         <option value="$PROJECT_DIR$/article/admin.py" />
-        <option value="$PROJECT_DIR$/article/templates/article/index.html" />
         <option value="$PROJECT_DIR$/article/templates/article/article.html" />
-        <option value="$PROJECT_DIR$/article/models.py" />
-        <option value="$PROJECT_DIR$/article/views.py" />
         <option value="$PROJECT_DIR$/read_statistics/models.py" />
         <option value="$PROJECT_DIR$/read_statistics/admin.py" />
         <option value="$PROJECT_DIR$/rootadmin/urls.py" />
         <option value="$PROJECT_DIR$/rootadmin/templates/rootadmin/base.html" />
-        <option value="$PROJECT_DIR$/read_statistics/utils.py" />
-        <option value="$PROJECT_DIR$/rootadmin/views.py" />
         <option value="$PROJECT_DIR$/rootadmin/templates/rootadmin/tables.html" />
+        <option value="$PROJECT_DIR$/rootadmin/views.py" />
+        <option value="$PROJECT_DIR$/read_statistics/utils.py" />
+        <option value="$PROJECT_DIR$/article/models.py" />
+        <option value="$PROJECT_DIR$/Blogs/settings.py" />
+        <option value="$PROJECT_DIR$/article/templates/article/index.html" />
+        <option value="$PROJECT_DIR$/article/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="255" />
+    <option name="y" value="62" />
     <option name="width" value="1845" />
-    <option name="height" value="1102" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -262,13 +273,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
@@ -280,28 +329,11 @@
               <item name="Blogs" type="462c0819:PsiDirectoryNode" />
               <item name="read_statistics" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="rootadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="rootadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="rootadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="rootadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,19 +346,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\rootadmin\templates\rootadmin" />
-      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images\blog_images" />
-      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images\banner" />
-      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\static\article\images\banner" />
-      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\rootadmin\static\rootadmin\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article" />
       <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images\banner" />
       <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\rootadmin\templates\rootadmin" />
       <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\templates\article" />
       <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\rootadmin\static\rootadmin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images" />
+      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\rootadmin\templates\rootadmin" />
+      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images\blog_images" />
+      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\article\static\article\images\banner" />
+      <recent name="E:\Sysyem_Project_Python_Demo\system_demo_three\Flask\Blogs\static\article\images\banner" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -422,23 +454,23 @@
       <workItem from="1580007666971" duration="7908000" />
       <workItem from="1580088612475" duration="1250000" />
       <workItem from="1580109458141" duration="7451000" />
-      <workItem from="1580173597314" duration="16517000" />
+      <workItem from="1580173597314" duration="21910000" />
+      <workItem from="1580259186543" duration="7526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120362000" />
+    <option name="totallyTimeSpent" value="133281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5020408" side_tool="true" weight="0.2533512" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4979592" weight="0.22788204" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4979592" weight="0.2538787" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21671388" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16288953" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5437416" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -450,20 +482,20 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.50708216" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.6175637" />
-      <window_info anchor="bottom" id="manage.py@Blogs" order="14" weight="0.04" />
+      <window_info anchor="bottom" id="manage.py@Blogs" order="14" weight="0.041208792" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3378016" />
+      <window_info anchor="right" id="Database" order="4" weight="0.1313673" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.5020408" side_tool="true" weight="0.2533512" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4979592" visible="true" weight="0.22788204" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4979592" visible="true" weight="0.2538787" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16005665" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.050824177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5437416" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,27 +507,18 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.50708216" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.6175637" />
-      <window_info anchor="bottom" id="manage.py@Blogs" order="14" weight="0.04" />
+      <window_info active="true" anchor="bottom" id="manage.py@Blogs" order="14" visible="true" weight="0.041208792" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3378016" />
+      <window_info anchor="right" id="Database" order="4" weight="0.1313673" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/article/static/article/images/banner/lbt1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/static/article/images/banner/lbt3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/static/article/images/banner/lbt2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/article/static/article/images/banner/banner_02.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -768,27 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blogs/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="63" column="117" selection-start-line="63" selection-start-column="117" selection-end-line="63" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Application/Anaconda/envs/Blogs/Lib/site-packages/django/db/models/sql/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -803,58 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#132#352#0" />
-            <element signature="e#390#569#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rootadmin/templates/rootadmin/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_statistics/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="62" column="58" lean-forward="true" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <element signature="e#275#370#0" />
-            <element signature="e#373#388#0" />
-            <element signature="e#1013#1479#0" />
-            <element signature="e#1863#2538#0" />
-            <element signature="e#2572#2918#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_statistics/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#472#745#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,38 +832,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_statistics/utils.py">
+    <entry file="file://D:/Application/Anaconda/envs/Blogs/Lib/site-packages/django/contrib/contenttypes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        <state relative-caret-position="-683">
+          <caret line="132" column="6" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280ecd94-3446-4ac5-8e07-5db544257c19/schema/blogs/table/read_statistics_readdetail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Application/Anaconda/envs/Blogs/Lib/site-packages/django/contrib/contenttypes/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_statistics/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#49#480#0" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rootadmin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
+        <state relative-caret-position="120">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#208#303#0" />
-            <element signature="e#327#872#0" />
-            <element signature="e#906#992#0" />
-            <element signature="e#1031#1806#0" />
-            <element signature="e#1852#2532#0" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_statistics/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blogs/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rootadmin/templates/rootadmin/tables.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_statistics/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding>
-            <element signature="e#222#271#0#HTML" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/templates/article/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="264" column="35" selection-start-line="264" selection-start-column="35" selection-end-line="264" selection-end-column="35" />
+          <folding>
+            <element signature="e#10195#10550#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="78" column="58" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#438#533#0" />
+            <element signature="e#1228#1546#0" />
+            <element signature="e#1922#2183#0" />
+            <element signature="e#2220#2895#0" />
+            <element signature="e#2929#3275#0" />
           </folding>
         </state>
       </provider>
