@@ -1,11 +1,12 @@
 {% extends 'article/base.html' %}
 
+
 {% block content %}
     <section class="container">
         <div class="content-wrap">
             <div class="content">
                 <header class="article-header">
-                    <h1 class="article-title"><a href="article.html">{{ content.title }}</a></h1>
+                    <h1 class="article-title"><a href="">{{ content.title }}</a></h1>
                     <div class="article-meta">
                         <span class="item article-meta-time">
                               <time class="time" data-toggle="tooltip" data-placement="bottom"
@@ -27,7 +28,8 @@
                         </span>
 
                         <span class="item article-meta-views" data-toggle="tooltip" data-placement="bottom"
-                              title="查看：{{ content.get_read_num }}"><i class="glyphicon glyphicon-eye-open"></i> {{ content.get_read_num }}
+                              title="查看：{{ content.get_read_num }}"><i
+                                class="glyphicon glyphicon-eye-open"></i> {{ content.get_read_num }}
                         </span>
                         <span
                                 class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom"
@@ -38,95 +40,123 @@
                 <article class="article-content">
                     <p><img data-original=" /static/{{ content.blog_type.type_images }}"
                             src=" /static/{{ content.blog_type.type_images }}" alt=""/></p>
-                    <p> 用php获取上个月最后一天的时间，有两种方法，都非常简单，详细实现源码如下： </p>
+
                     <pre class="prettyprint lang-php">
                         {{ content.content|safe }}
                     </pre>
-                    <p> 方法一是利用当前时间离本月初有多少时间，然后用当前时间减去这个时间差，就可以得到上月最后一天了。 </p>
-                    <p> 方法二是先计算本月多少号，即离月初有多少天，然后用strtotime计算出$day天前的时间戳，也可以得到上个月的最后一天。 </p>
-                    <p class="article-copyright hidden-xs">未经允许不得转载：<a href="">异清轩博客</a> » <a href="article.html">php如何判断一个日期的格式是否正确</a>
+
+                    <p class="article-copyright hidden-xs">未经允许不得转载：<a href="">浮生六意博客</a> » <a href="article.html">{{ content.title }}</a>
                     </p>
                 </article>
-                <div class="article-tags">标签：<a href="" rel="tag">PHP</a></div>
-                <div class="relates">
-                    <div class="title">
-                        <h3>相关推荐</h3>
-                    </div>
-                    <ul>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                        <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                    </ul>
-                </div>
+                <div class="article-tags">标签：<a href="" rel="tag">{{ content.blog_type }}</a></div>
                 <div class="title" id="comment">
                     <h3>评论
                         <small>抢沙发</small>
                     </h3>
                 </div>
-                <!--<div id="respond">
-                  <div class="comment-signarea">
-                    <h3 class="text-muted">评论前必须登录！</h3>
-                    <p> <a href="javascript:;" class="btn btn-primary login" rel="nofollow">立即登录</a> &nbsp; <a href="javascript:;" class="btn btn-default register" rel="nofollow">注册</a> </p>
-                    <h3 class="text-muted">当前文章禁止评论</h3>
-                  </div>
-                </div>-->
                 <div id="respond">
-                    <form action="" method="post" id="comment-form">
+                    <form method="post" id="comment_form">
+                        {% csrf_token %}
                         <div class="comment">
-                            <div class="comment-title"><img class="avatar" src="/static/article/images/icon/icon.png"
-                                                            alt=""/>
+                            <div class="comment-title">
+                                <img class="avatar" src="/static/article/images/icon/icon.png" alt=""/>
                             </div>
-                            <div class="comment-box">
-                                <textarea placeholder="您的评论可以一针见血" name="comment" id="comment-textarea" cols="100%"
-                                          rows="3" tabindex="1"></textarea>
-                                <div class="comment-ctrl"><span class="emotion"><img
-                                        src="/static/article/images/face/5.png"
-                                        width="20" height="20"
-                                        alt=""/>表情</span>
-                                    <div class="comment-prompt"><i class="fa fa-spin fa-circle-o-notch"></i> <span
-                                            class="comment-prompt-text"></span></div>
-                                    <input type="hidden" value="1" class="articleid"/>
-                                    <button type="submit" name="comment-submit" id="comment-submit" tabindex="5"
-                                            articleid="1">评论
-                                    </button>
+                            <div class="comment-box" id="comments">
+                                                    <textarea placeholder="想对作者说点什么:" name="comment"
+                                                              id="comment-textarea" cols="100%"
+                                                              rows="3" tabindex="1" autofocus></textarea>
+                                {##}
+                                {#                                <div class="comment-ctrl"><span class="emotion"><img#}
+                                {#                                        src="/static/article/images/face/5.png" width="20"#}
+                                {#                                        height="20" alt=""/>表情</span></div>#}
+
+                                <div class="comment-prompt">
+                                    <i class="fa fa-spin fa-circle-o-notch"></i>
+                                    <span class="comment-prompt-text"></span>
                                 </div>
+
+                                <input type="hidden" name="object_id" id="object_id" value="{{ content.pk }}">
+                                <input type="hidden" name="content_type" id="content_type" value="blog">
+                                <input type="hidden" name="username" id="username"
+                                       value="{{ request.COOKIES.username }}">
+                                <input type="hidden" name="reply_comment_id" value="0" id="reply_comment_id">
+                                <input type="submit" tabindex="5" id="comment-submit" name="comment-submit"
+                                       articleid="1" value="评论"/>
+
                             </div>
                         </div>
                     </form>
                 </div>
-                <div id="postcomments">
-                    <ol class="commentlist">
-                        <li class="comment-content"><span class="comment-f">#1</span>
-                            <div class="comment-avatar"><img class="avatar" src="/static/article/images/icon/icon.png"
-                                                             alt=""/>
-                            </div>
-                            <div class="comment-main">
-                                <p>来自<span class="address">河南郑州</span>的用户<span class="time">(2016-01-06)</span><br/>
-                                    这是匿名评论的内容这是匿名评论的内容，这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容。</p>
-                            </div>
-                        </li>
-                    </ol>
+                {% if comments %}
+                    {% for comment in comments %}
+                        <div class="text">
+                            <div id="postcomments">
+                                <ol class="commentlist">
+                                    <li class="comment-content"><span class="comment-f"></span>
+                                        <div class="comment-avatar"><img class="avatar"
+                                                                         src="/static/article/images/icon/icon.png"
+                                                                         alt=""/>
+                                        </div>
+                                        <div class="comment-main">
+                                            <p>来自<span class="address">{{ comment.user.username }}</span>的用户<span
+                                                    class="time">{{ comment.comment_time|date:'Y-m-d' }}</span>
 
-                    <div class="quotes"><span class="disabled">首页</span><span class="disabled">上一页</span><a
-                            class="current">1</a><a href="">2</a><span class="disabled">下一页</span><span
-                            class="disabled">尾页</span></div>
-                </div>
+                                                <br/>
+                                            <div id="comment_{{ comment.pk }}">{{ comment.text|safe }}</div>
+                                            {#                                                {{ comment.text|safe }}#}
+                                            <button type="button"
+                                                    onclick="reply({{ comment.pk }},'{{ comment.user.username }}')"
+                                                    class="btn btn-info btn-sm" style="float: right;">回复
+                                            </button>
+                                            </p>
+                                        </div>
+                                        {% if comment.root_comment.all %}
+                                            {% for reply in comment.root_comment.all %}
+                                                <div style="padding-left: 50px;">
+                                                    <div class="comment-avatar"><img class="avatar"
+                                                                                     src="/static/article/images/icon/icon.png"
+                                                                                     alt=""/>
+                                                    </div>
+                                                    <div class="comment-main">
+                                                        <p><span
+                                                                class="address">{{ reply.user.username }}回复给{{ comment.user.username }}</span>:<span
+                                                                class="time">{{ reply.comment_time|date:'Y-m-d' }}</span><br/>
+                                                        <div id="comment_{{ reply.pk }}">{{ reply.text|safe }}</div>
+                                                        <button type="button"
+                                                                onclick="reply({{ reply.id }},'{{ reply.user.username }}')"
+                                                                class="btn btn-info btn-sm" style="float: right;">回复
+                                                        </button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+
+                                        {% endif %}
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+
+                {% endif %}
+                <div class="quotes"><span class="disabled">首页</span><span class="disabled">上一页</span><a
+                        class="current">1</a><a href="">2</a><span class="disabled">下一页</span><span
+                        class="disabled">尾页</span></div>
             </div>
         </div>
         <aside class="sidebar">
             <div class="fixed">
                 <div class="widget widget-tabs">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#notice" aria-controls="notice" role="tab"
+                        <li role="presentation" class="active"><a href="#notice" aria-controls="notice"
+                                                                  role="tab"
                                                                   data-toggle="tab">网站公告</a></li>
-                        <li role="presentation"><a href="#centre" aria-controls="centre" role="tab" data-toggle="tab">会员中心</a>
+                        <li role="presentation"><a href="#centre" aria-controls="centre" role="tab"
+                                                   data-toggle="tab">会员中心</a>
                         </li>
-                        <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系站长</a>
+                        <li role="presentation"><a href="#contact" aria-controls="contact" role="tab"
+                                                   data-toggle="tab">联系站长</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -159,7 +189,8 @@
                 <div class="widget widget_search">
                     <form class="navbar-form" action="/Search" method="post">
                         <div class="input-group">
-                            <input type="text" name="keyword" class="form-control" size="35" placeholder="请输入关键字"
+                            <input type="text" name="keyword" class="form-control" size="35"
+                                   placeholder="请输入关键字"
                                    maxlength="15" autocomplete="off">
                             <span class="input-group-btn">
             <button class="btn btn-default btn-search" name="search" type="submit">搜索</button>
@@ -175,46 +206,152 @@
                         别让你不能做的事妨碍到你能做的事。（John Wooden）</p>
                 </div>
             </div>
+            {#今日热搜#}
             <div class="widget widget_hot">
-                <h3>热门文章</h3>
+                <h3>今日热门文章</h3>
                 <ul>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                    <li><a href=""><span class="thumbnail"><img class="thumb"
-                                                                data-original="/static/article/images/excerpt.jpg"
-                                                                src="/static/article/images/excerpt.jpg"
-                                                                alt=""></span><span
-                            class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i
-                            class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i
-                            class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
+                    {% if today_hot_data %}
+                        {% for hot_data in today_hot_data %}
+                            <li>
+                                <a href="/article/details/{{ hot_data.pk }}/">
+                                        <span class="thumbnail">
+                                            <img class="thumb"
+                                                 data-original="/static/article/images/hot.jpg"
+                                                 src="/static/article/images/hot.jpg"
+                                                 alt="">
+                                        </span>
+                                    <span class="text">
+                                            {{ hot_data.content_object }}
+                                        </span>
+                                    <span class="muted">
+                                            <i class="glyphicon glyphicon-time"></i>
+                                            {{ hot_data.date }}
+                                        </span>
+                                    <span class="muted">
+                                            <i class="glyphicon glyphicon-eye-open"></i>
+                                                    {{ hot_data.read_num }}
+                                    </span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <div style="width: 100%;height: 100px;font-size: larger;text-align: center;vertical-align: center;line-height: 100px">
+                            今日暂无!
+                        </div>
+                    {% endif %}
+
+
                 </ul>
             </div>
         </aside>
     </section>
+{% endblock %}
+
+
+
+{% block script %}
+    <script>
+        $('#comment-textarea').click(function () {
+            $.ajax({
+                url: '/article/is_login/',
+                type: 'post',
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+                success: function (data) {
+                    console.log(data)
+                    var codes = data['code'];
+                    if (codes == 400) {
+                        $('#loginModal').modal('show')
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            })
+        })
+    </script>
+    <script>
+
+        $(function () {
+            $("#comment-submit").click(function () {
+                var commentContent = $("#comment-textarea");
+                var commentButton = $("#comment-submit");
+                var promptBox = $('.comment-prompt');
+                var promptText = $('.comment-prompt-text');
+                var articleid = $('.articleid').val();
+
+                var object_id = $('#object_id').val();
+                var content_type = $('#content_type').val();
+                var username = $('#username').val();
+                var parrent_username = $('#parrent_username').val();
+                var reply_comment_id = $('#reply_comment_id').val();
+
+
+                promptBox.fadeIn(400);
+                if (commentContent.val() === '') {
+                    promptText.text('请留下您的评论');
+                    return false;
+                }
+                commentButton.attr('disabled', true);
+                commentButton.addClass('disabled');
+                promptText.text('正在提交...');
+                $.ajax({
+                    type: "POST",
+                    url: '/comment/submit_comment/',
+                    data: {
+                        comment: replace_em(commentContent.val()),
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                        object_id: object_id,
+                        content_type: content_type,
+                        username: username,
+                        reply_comment_id: reply_comment_id,
+                        parrent_username: parrent_username,
+
+                    },
+                    cache: false, //不缓存此页面
+                    success: function (data) {
+                        console.log(data);
+                        promptText.text('评论成功!');
+                        commentContent.val(null);
+                        var comment_html = '<div id="postcomments">' +
+                            '<ol class="commentlist"><li class="comment-content"><span class="comment-f"></span>' +
+                            '<div class="comment-avatar"><img class="avatar" src="/static/article/images/icon/icon.png"alt=""/> </div>' +
+                            '<div class="comment-main">' +
+                            '<p>来自<span class="address">' + data['username'] + '</span>的用户<span class="time">' + data['comment_time'] + '</span><br/>' + data['text'] +
+                            '</p>' +
+                            '</div>' +
+                            '</li>' + '</ol> </div>';
+                        $(".text").prepend(comment_html);
+                        commentButton.attr('disabled', false);
+                        commentButton.removeClass('disabled');
+                    },
+                });
+                promptBox.fadeOut(100);
+                return false;
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $("#comment-textarea").click(function () {
+            var str = $("#comment").val();
+            $("#show").html(replace_em(str));
+        });
+
+
+    </script>
+    <script>
+        function reply(reply_comment_id, parrent_usertname) {
+            $('#reply_comment_id').val(reply_comment_id);
+            var html = $('#comment_' + reply_comment_id).html();
+            var comments = '<input type="hidden" name="parrent_username" id="parrent_username"' +
+                'value="' + parrent_usertname + '">';
+            $('#comments').prepend(comments);
+            $('#reply_comment').html(html);
+            $('html').animate({scrollTop: $('#comment_form').offset().top - 100}, 300, function () {
+                $('#comment-textarea').focus()
+            });
+        }
+    </script>
+
 {% endblock %}

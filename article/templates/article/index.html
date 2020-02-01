@@ -6,7 +6,7 @@
             <div class="content">
                 <div class="jumbotron">
                     <h1>欢迎访问浮生六意博客</h1>
-                    <p>在这里可以看到前端技术，后端程序，网站内容管理系统等文章，还有我的程序人生！</p>
+                    <p>在这里我将记录生活的点滴。</p>
                 </div>
                 <div id="focusslide" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -36,14 +36,13 @@
                             rel="nofollow"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">下一个</span> </a></div>
                 <article class="excerpt-minic excerpt-minic-index">
-                    <h2><span class="red">【今日推荐】</span><a href="" title="">从下载看我们该如何做事</a></h2>
-                    <p class="note">一次我下载几部电影，发现如果同时下载多部要等上几个小时，然后我把最想看的做个先后排序，去设置同时只能下载一部，结果是不到一杯茶功夫我就能看到最想看的电影。
-                        这就像我们一段时间内想干成很多事情，是同时干还是有选择有顺序的干，结果很不一样。同时...</p>
+                    <h2><span class="red">【个人座右铭】</span><a href="" title=""></a></h2>
+                    <p class="note">
+                        　　人生没有绝对的公平，而是相对公平。在一个天平上，你得到越多，势必要承受更多，每一个看似低的起点，都是通往更高峰的必经之路。</p>
                 </article>
                 <div class="title">
                     <h3>最新发布</h3>
-                    <div class="more"><a href="">PHP</a><a href="">JavaScript</a><a href="">EmpireCMS</a><a href="">Apache</a><a
-                            href="">MySQL</a></div>
+
                 </div>
                 {% if blog_type_all %}
                     {% for blog in blog_type_all %}
@@ -88,27 +87,16 @@
                         </header>
                         <p class="meta">
                             <time class="time"><i class="glyphicon glyphicon-time"></i> {{ foo.created_time }}</time>
-                            <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 共120人围观</span> <a
-                                class="comment" href="article.html#comment"><i class="glyphicon glyphicon-comment"></i>
-                            0个不明物体</a>
+                            <span class="views"><i class="glyphicon glyphicon-eye-open"></i> {{ foo.read_num }}</span>
+                            <a
+                                    class="comment" href="article.html#comment"><i
+                                    class="glyphicon glyphicon-comment"></i>
+                                0个不明物体</a>
                         </p>
                         <span class="user"><i class="glyphicon glyphicon-user"></i>{{ foo.author }}</span>
                         <p class="note">{{ foo.content|slice:"60" }}....</p>
                     </article>
                 {% endfor %}
-
-
-
-
-                <nav class="pagination" style="display: none;">
-                    <ul>
-                        <li class="prev-page"></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="?page=2">2</a></li>
-                        <li class="next-page"><a href="?page=2">下一页</a></li>
-                        <li><span>共 2 页</span></li>
-                    </ul>
-                </nav>
             </div>
         </div>
         <aside class="sidebar">
@@ -126,14 +114,14 @@
                         <div role="tabpanel" class="tab-pane notice active" id="notice">
                             <ul>
                                 <li>
-                                    <time datetime="2016-01-04">01-04</time>
-                                    <a href="" target="_blank">欢迎访问浮生博客</a></li>
+                                    <time datetime="{{ times }}">{{ times }}</time>
+                                    <a href="" target="_blank">欢迎访问浮生六意博客</a></li>
                                 <li>
-                                    <time datetime="2016-01-04">01-04</time>
-                                    <a target="_blank" href="">在这里可以看到前端技术，后端程序，网站内容管理系统等文章，还有我的程序人生！</a></li>
+                                    <time datetime="{{ times }}">{{ times }}</time>
+                                    <a target="_blank" href="">菜鸟级程序员，大佬手下留情。</a></li>
                                 <li>
-                                    <time datetime="2016-01-04">01-04</time>
-                                    <a target="_blank" href="">在这个小工具中最多可以调用五条</a></li>
+                                    <time datetime="{{ times }}">{{ times }}</time>
+                                    <a target="_blank" href="">新的一年平安喜乐</a></li>
                             </ul>
                         </div>
                         <div role="tabpanel" class="tab-pane centre" id="centre">
@@ -149,96 +137,24 @@
                     </div>
                 </div>
                 <div class="widget widget_search">
-                    <form class="navbar-form" action="/Search" method="post">
+                    <form class="navbar-form" action="#" method="post">
                         <div class="input-group">
-                            <input type="text" name="keyword" class="form-control" size="35" placeholder="请输入关键字"
+                            <input type="text" name="keyword" class="form-control" size="35" placeholder="暂未开通"
                                    maxlength="15" autocomplete="off">
                             <span class="input-group-btn">
-            <button class="btn btn-default btn-search" name="search" type="submit">搜索</button>
+            <button class="btn btn-default btn-search" name="search">搜索</button>
             </span></div>
                     </form>
                 </div>
             </div>
             <div class="widget widget_sentence">
-                <h3>每日一句</h3>
+                <h3>个人感悟</h3>
                 <div class="widget-sentence-content">
-                    <h4>2020年01月05日星期二</h4>
-                    <p>Do not let what you cannot do interfere with what you can do.<br/>
-                        别让你不能做的事妨碍到你能做的事。（John Wooden）</p>
+                    <h4>Everyone loses！</h4>
+                    <p> Never seen an early, diligent, prudent and honest man complain of his fate.<br/>
+                        未曾见过一个早起勤奋谨慎诚实的人抱怨命运不好。</p>
                 </div>
             </div>
-            {#今日热搜#}
-            {#            <div class="widget widget_hot">#}
-            {#                <h3>今日热门文章</h3>#}
-            {#                <ul>#}
-            {#                    {% if today_hot_data %}#}
-            {#                        {% for hot_data in today_hot_data %}#}
-            {#                            <li>#}
-            {#                                <a href="/article/details/{{ hot_data.pk }}/">#}
-            {#                            <span class="thumbnail">#}
-            {#                                <img class="thumb"#}
-            {#                                     data-original="/static/article/images/hot.jpg"#}
-            {#                                     src="/static/article/images/hot.jpg"#}
-            {#                                     alt="">#}
-            {#                            </span>#}
-            {#                                    <span class="text">#}
-            {#                                {{ hot_data.content_object }}#}
-            {#                            </span>#}
-            {#                                    <span class="muted">#}
-            {#                                <i class="glyphicon glyphicon-time"></i>#}
-            {#                                {{ hot_data.date }}#}
-            {#                            </span>#}
-            {#                                    <span class="muted">#}
-            {#                                <i class="glyphicon glyphicon-eye-open"></i>#}
-            {#                                        {{ hot_data.read_num }}#}
-            {#                        </span>#}
-            {#                                </a>#}
-            {#                            </li>#}
-            {#                        {% endfor %}#}
-            {#                    {% else %}#}
-            {#                        <span>今日暂无！</span>#}
-            {#                    {% endif %}#}
-            {##}
-            {##}
-            {#                </ul>#}
-            {#            </div>#}
-            {#昨日热搜#}
-            {#            <div class="widget widget_hot">#}
-            {#                <h3>昨日热门文章</h3>#}
-            {#                <ul>#}
-            {#                    {% if yesterday_hot_data %}#}
-            {#                        {% for y_hot_data in yesterday_hot_data %}#}
-            {#                            <li>#}
-            {#                                <a href="/article/details/{{ y_hot_data.pk }}/">#}
-            {#                            <span class="thumbnail">#}
-            {#                                <img class="thumb"#}
-            {#                                     data-original="/static/article/images/hot.jpg"#}
-            {#                                     src="/static/article/images/hot.jpg"#}
-            {#                                     alt="">#}
-            {#                            </span>#}
-            {#                                    <span class="text">#}
-            {#                                {{ y_hot_data.content_object }}#}
-            {#                            </span>#}
-            {#                                    <span class="muted">#}
-            {#                                <i class="glyphicon glyphicon-time"></i>#}
-            {#                                {{ y_hot_data.date }}#}
-            {#                            </span>#}
-            {#                                    <span class="muted">#}
-            {#                                <i class="glyphicon glyphicon-eye-open"></i>#}
-            {#                                        {{ y_hot_data.read_num }}#}
-            {#                        </span>#}
-            {#                                </a>#}
-            {#                            </li>#}
-            {##}
-            {#                        {% endfor %}#}
-            {#                    {% else %}#}
-            {#                        <span>昨日暂无！</span>#}
-            {#                    {% endif %}#}
-            {##}
-            {##}
-            {#                </ul>#}
-            {#            </div>#}
-            {#周热搜#}
             <div class="widget widget_hot">
                 <h3>周热门文章</h3>
                 <ul>

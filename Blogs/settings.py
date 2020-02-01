@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'rootadmin',
     'ckeditor',
     'ckeditor_uploader',
-    'read_statistics'
+    'read_statistics',
+    'comment',
 ]
 
 MIDDLEWARE = [

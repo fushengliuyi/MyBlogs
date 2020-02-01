@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('article/', include('article.urls')),  # 博客前端 页面
     path('rootadmin/', include('rootadmin.urls')),  # 后台管理页面
-    path('ckeditor', include('ckeditor_uploader.urls'))
+    path('ckeditor', include('ckeditor_uploader.urls')),
+    path('comment/', include('comment.urls')),  # 评论模块
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
